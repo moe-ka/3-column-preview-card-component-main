@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    /* color */
+    --color-primary-Brightorange: hsl(31, 77%, 52%);
+    --color-primary-Darkcyan: hsl(184, 100%, 22%);
+    --color-primary-Verydarkcyan: hsl(179, 100%, 13%);
+
+    --color-Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --color-Verylightgraybackground-headings-buttons: hsl(0, 0%, 95%);
+
+    /* font */
+    --font-heading: 'Big Shoulders Display', cursive;
+    --font-pg: 'Lexend Deca', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    font-size: 0.938rem;
+    background-color: #fff;
+    
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    max-width: 1008px;
+    height: fit-content;
+    display: flex;
+}
+
+.card{
+    padding:  3rem 3.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card.left{
+    background-color: var(--color-primary-Brightorange);
+    color: var(--color-primary-Brightorange);
+    border-radius: 1rem 0 0 1rem;
+}
+
+.card.middle{
+    background-color: var(--color-primary-Darkcyan);
+    color: var(--color-primary-Darkcyan);
+}
+
+.card.right{
+    background-color: var(--color-primary-Verydarkcyan);
+    color: var(--color-primary-Verydarkcyan);
+    border-radius: 0 1rem 1rem 0;
+}
+
+.card .header{
+    font-family: var(--font-heading);
+    color: var(--color-Verylightgraybackground-headings-buttons);
+    margin: 1.5rem 0;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+.card .description{
+    font-family: var(--font-pg);
+    color: var(--color-Transparent-white-paragraphs);
+    line-height: 1.8rem;
+    
+}
+
+.card .btn-submit{
+    margin-top: 5rem;
+    border: none;
+    font-size: .9rem;
+    padding: .7rem;
+    font-family: var(--font-pg);
+    color: inherit;
+    background-color: #fff;
+    border-radius: 2rem;
+    margin-right: 3.8rem;
+    cursor: pointer;
+    border: 3px solid #fff;
+}
+
+.btn-submit:hover{
+    background-color: rgba(255, 255, 255, 0);
+    color: #fff;
+}
+
+/* responsive breakpoint */
+@media (min-width: 900px) {
+    body{
+        display: grid;
+        height: 100vh;
+    }
+   
+}
+@media (max-width: 900px) {
+    .container{
+        margin: 24px;
+        flex-direction: column;
+    }
+
+    .card.left{
+        border-radius: 1rem 1rem 0 0;
+    }
+    
+    .card.right{
+        border-radius: 0 0 1rem 1rem;
+    }
+    .card .btn-submit{
+        max-width: 200px;
+    }
+    
+}
+@media (max-width: 375px) {
+    .card{
+        padding:  3rem 3rem;
+    }
+    .card .btn-submit{
+        margin-top: 1rem;
+        margin-right: 3.8rem;
+    }
+    
+}
+
+
